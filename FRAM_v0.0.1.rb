@@ -1,5 +1,6 @@
 # FRAM v0.0.1
 # written by Alex Hauptmann
+# for Sonic Pi v3.3.1
 # last updated 04/07/21
 # FRAM is a set of Sonic Pi scripts
 # describing and sequencing a cascade
