@@ -68,6 +68,10 @@ define :klatt do |note, init_consonant, f1_a, f2_a, f3_a, f1_b, f2_b, f3_b, end_
           use_synth :pnoise
           play 40, cutoff: 130, amp: 0.5, decay: 0.125/8, release: 0.125/8
         end
+        # AUTHOR'S NOTE: ope, I think I know why end_consonant "K" is messing with formant frequencies of the value before it.
+        # the way I have this written now probably means that the synth will articulate "K" before it even gets the command
+        # to update F3. yeah looks like I'm gonna need to clean up the code's infrastructure before I can add more functionality.
+        # such, it seems, is the world of Programming.
       end
       control c3, centre: f3_b
       if end_consonant == "T"
